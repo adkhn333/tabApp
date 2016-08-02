@@ -1,0 +1,15 @@
+.startBack{
+	background: url('../../img/start_back.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+.textStartDay{
+	color:#334455;
+}
+#startIcon{
+    margin-top:35%;
+    width:50%;
+    height: 50%;
+}

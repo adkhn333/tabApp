@@ -1,0 +1,71 @@
+.bar-header{
+	border-bottom-width: 0px;
+}
+.logoImage{
+	width:50%;
+	height:160%;
+}
+.mainImage{
+	width:50%;
+}
+.activateContent{
+	margin-top: 20%;
+	overflow-y: hidden;
+}
+.activateButton{
+	background-color: #ff9999;
+	font-size: 24px;
+	color:white;
+}
+
+
+.inputWrappersActivate{
+	clear: both;
+	border:1px solid #999999;
+	border-radius: 2px;
+	height:35%;
+	width: 90%;
+	margin: auto auto 40px auto;
+}
+.inputLabelActivate{
+	width: 50%;
+	padding-left:10%;
+	font-size: 20px;
+	line-height: 30px;
+	float:left;
+}
+.activateSelectors{
+	width: 50%;
+	min-height:40px;
+	font-size: 18px;
+	min-width:40%;
+	border:0px;
+	background-color: white;
+}
+
+.wrapperActivate{
+	border:1px solid #999999;
+	border-radius: 2px;
+	height:30%;
+	font-size: 18px;
+	width: 90%;
+	margin: auto;
+
+}
+.inputTextActivate{
+	line-height: 30px;
+	width: 50%;
+	padding-left:10%;
+	float: left;
+}
+.inputItemActivate{
+	width: 50%;
+}
+#setSizeFontActivate{
+	font-size:18px;	
+}
+
+.vendorList{
+	width: 90%;
+	margin:auto;
+}

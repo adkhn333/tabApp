@@ -1,0 +1,40 @@
+ <ion-view>
+ <ion-content delegate-handle="mainScroll">
+ <form >
+  <div class="list">
+     <!-- Get city name as cityName and city Id as cityId from database on page load -->
+     <label class="item item-input item-select">
+      <div class="input-label" >Select City</div>
+      <select ng-model="cityId" ng-change="search(cityId)" > 
+        <option ng-repeat="city in cities track by $index" value="{{city.cityId}}">{{city.cityName}}</option>
+      </select>
+    </label>
+    <label class="item item-input" >
+      <span  class="input-label">Select Vendor:</span>
+      <input type="text" ng-model="vendorName"  >
+    </label>
+    <h3 ng-show="fullName">Selected Vendor : {{fullName}}</h3> 
+    <ul class="list" ng-show="vendorName">
+      <li class="item" ng-click="saveId(item)" ng-value="fullName" ng-repeat="item in allVendors | filter : vendorName">
+        {{item.name}},{{item.landmark}},{{item.cityName}}
+      </li>
+    </ul> 
+    <!-- Get vendor name as vendorName and vendor Id as vendorId from database on page load 
+    <label class="item item-input item-select">
+      <div class="input-label" >Select Vendor</div>
+      <select ng-model="vendorId"> 
+        <option  ng-repeat="vendor in allVendors track by $index" value="{{vendor.vendorId}}">{{vendor.vendorName}}</option>
+      </select>
+    </label>
+    -->
+    <label class="item item-input" >
+      <span  class="input-label">Code:</span>
+      <input type="text" ng-model="Code">
+    </label> 
+    <div class="padding">
+      <button ng-click="updateTabList(Code,item.id)" class="button button-block button-positive">Activate</button>
+    </div>
+  </div>
+</form>
+</ion-content>
+</ion-view>

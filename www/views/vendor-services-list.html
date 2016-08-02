@@ -1,0 +1,58 @@
+<ion-view id="vendor-services">
+   <ion-header-bar class="vendor-services-header"  align-title="center">
+       <i class="button icon-left ion-chevron-left"></i>
+       <h1 class="title">SAUNDARYA SHREE BEAUTY PARLOUR</h1>
+
+   </ion-header-bar>
+    <ion-content delegate-handle="mainScroll" class="has-header" style="margin-top:20px;">
+        <!-- <div class="row services-tabs"> -->
+            <!-- <div class="col selected-services-tab active" ng-click="tabHasChanged(0)"> -->
+                <div>
+                <h2 align="center">FULL MENU</h2>
+            <!-- </div> -->
+            <!-- <div class="col vendor-services-tab" ng-click="tabHasChanged(1)">
+                <p>VIEW FULL MENU</p>
+            </div> -->
+        </div> <!-- .tabs --><br>
+        <div class="row padding-right padding-left" id="slideBox">
+            <ion-slide-box style="width:100%!important; background-color: #FFF;"
+                        class="slideBox"
+                        show-pager="false"
+                        delegate-handle="my-handle">
+                <ion-slide ng-repeat="x in [1,2]">
+                    <div class="category" ng-repeat="x in services">
+                        <div class="category-title">{{x.name}}</div>
+                        <div class="category-content" ng-repeat="y in x.value">
+                            <span class="category-status" ng-show="selectedServices[y.service]"></span>
+                            <div class="category-name">{{y.service}}</div>
+                            <div class="category-price">
+                                <strike>
+                                    <span class="striked-text">&#x20B9;{{y.price}} </span>
+                                    <span class="line-arrow right" style="position:relative;bottom:0px ;left:3px;"></span>
+                                </strike>&nbsp;
+                                <span>&#x20B9;{{y.discountprice}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </ion-slide>
+
+            </ion-slide-box>
+        </div>
+
+
+    </ion-content>
+
+    <ion-footer-bar class="footer">
+        <div class="row newFooter">
+            <div class="col col-33" id="overview" ng-click="overviewButton()">OVERVIEW</div>
+            <div class="col col-66" id="proceed" ng-click="proceedButton()">
+                PROCEED
+                <i style="font-size:25px;" class="icon ion-ios-cart"></i>
+                <span>5</span>&nbsp;
+                <span>( &#x20B9;1000 )</span>
+                
+            </div>
+        </div> <!-- .newFooter -->
+    </ion-footer-bar>
+</ion-view>
+

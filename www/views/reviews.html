@@ -1,0 +1,23 @@
+<ion-view class="reviews">
+<ion-content>
+<div>
+	<label class="heading"><b>Reviews</b></label>
+</div>
+
+<div class="ratings">
+	<span ng-repeat="counter in starrating(3) track by $index" class="trueRating">&#9733</span>
+	<span ng-repeat="counter in starrating(5-3) track by $index" class="remRating">&#9733</span>
+</div>
+
+
+<form class="reviewbox" style="margn-top:30%">
+	 <div class="item item-input-inset">
+      <label class="item item-input-wrapper">		
+      <input type="text" placeholder="Please give your review">
+      </label>
+      <button class="button">submit</button>
+   </div>
+</form>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view>
+      
+  <ion-content delegate-handle="mainScroll" class="activateContent">
+    <div align="center"><img src="../img/logo-01.png" class="mainImage"></div>
+    <form >
+         <!-- Get city name as cityName and city Id as cityId from database on page load -->
+        <div class="inputWrappersActivate">
+          <div class="inputLabelActivate" >City</div>
+          <select ng-model="cityId" 
+            ng-change="search(cityId)"
+            class="activateSelectors"> 
+            <option 
+              ng-repeat="city in cities track by $index" 
+              value="{{city.cityId}}">
+              {{city.cityName}}
+            </option>
+          </select>
+        </div>
+
+        <div >
+          <div class="wrapperActivate">
+            <div class="inputTextActivate">Vendor</div>
+            <input type="text" 
+              id="setSizeFontActivate" 
+              class="inputItemActivate" 
+              ng-model="vendorName"
+              ng-change="unsetName()"
+              >
+          </div>
+          <div class="wrapperActivate">
+            <div class="inputTextActivate">Code</div>
+            <input type="text" id="setSizeFontActivate" class="inputItemActivate" ng-model="Code" >
+          </div>
+        </div>
+        <div class="vendorList">
+          <h4 ng-show="fullName!='' && fullName!=undefined">Selected Vendor : {{fullName}}</h4> 
+          <ul class="list" ng-show="vendorName">
+            <li class="item" 
+              ng-click="saveId(item)" 
+              ng-repeat="item in allVendors | filter : vendorName">
+              {{item.name}},{{item.landmark}},{{item.cityName}}
+            </li>
+          </ul> 
+        </div>
+        <div class="padding">
+          <button ng-click="updateTabList(Code,item.id)" 
+            class="button button-full activateButton">
+            SUBMIT
+          </button>
+        </div>
+        </form>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,14 @@
+.tabs-striped.tabs-dark .tab-item.tab-item-active{
+	border-color:#ff8888;
+}
+
+.slideSize{
+	margin:auto;
+	position: absolute;
+	width: 95%;
+	top:70%;
+}
+.sliderImages{
+	height:20%;
+	width: 98%;
+}

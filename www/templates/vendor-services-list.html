@@ -1,0 +1,21 @@
+<ion-view id="vendor-services">
+    <ion-content delegate-handle="mainScroll" class="has-header" >
+        <div class="row padding-right padding-left" id="slideBox">
+            <div class="category" ng-repeat="x in services">
+                <div class="category-title">{{x.name}}</div>
+                <div class="category-content" ng-repeat="y in x.value">
+                    <span class="category-status" ng-show="selectedServices[y.service]"></span>
+                    <div class="category-name">{{y.service}}</div>
+                    <div class="category-price">
+                        <strike>
+                            <span class="striked-text">&#x20B9;{{y.price}} </span>
+                            <span class="line-arrow right" style="position:relative;bottom:0px ;left:3px;"></span>
+                        </strike>&nbsp;
+                        <span>&#x20B9;{{y.discountprice}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </ion-content>
+</ion-view>
+
